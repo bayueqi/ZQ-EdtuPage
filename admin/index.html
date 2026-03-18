@@ -6564,7 +6564,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
                         <strong>用最简单的话解释：</strong><br><br>
 
                         <strong>🚀 问题是这样的：</strong><br>
-                        我们的 edgetunnel 服务部署在 Cloudflare Workers 上。但是 Cloudflare 有个限制——他们的 Workers 无法直接访问 Cloudflare
+                        我们的 ZQ-Edtu 服务部署在 Cloudflare Workers 上。但是 Cloudflare 有个限制——他们的 Workers 无法直接访问 Cloudflare
                         自己的服务。<br><b>这就像名叫 Cloudflare 的小白永远无法从自己的眼睛里看到自己。</b><br><br>
 
                         <strong>💡 解决方案：</strong><br>
@@ -6604,7 +6604,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
                     </p>
 
                     <p style="margin-bottom: 16px; line-height: 1.8; color: var(--text-secondary);">
-                        而我们的 <b>edgetunnel</b> 是部署在 Cloudflare Workers 上的代理服务。根据 Cloudflare Workers 的限制政策，Workers
+                        而我们的 <b>ZQ-Edtu</b> 是部署在 Cloudflare Workers 上的代理服务。根据 Cloudflare Workers 的限制政策，Workers
                         节点无法直接连接到
                         Cloudflare 自有的 IP 地址段。这意味着：
                     </p>
@@ -7643,7 +7643,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
                 originalConfig = JSON.parse(JSON.stringify(currentConfig));
                 renderUI();
                 // 设置网页标题
-                document.title = `${currentConfig.优选订阅生成?.SUBNAME || 'edgetunnel'} 设置页面 - 管理后台`;
+                document.title = `${currentConfig.优选订阅生成?.SUBNAME || 'ZQ-Edtu'} 设置页面 - 管理后台`;
             } catch (error) {
                 showToast('加载配置失败: ' + error.message, 'error');
             }
@@ -7651,7 +7651,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
 
         function renderUI() {
             // 标题
-            document.getElementById('pageTitle').textContent = (currentConfig.优选订阅生成?.SUBNAME || 'edgetunnel') + ' 设置页面';
+            document.getElementById('pageTitle').textContent = (currentConfig.优选订阅生成?.SUBNAME || 'ZQ-Edtu') + ' 设置页面';
 
             // 检查 CF 使用情况并显示模块
             const cfUsageModule = document.getElementById('cfUsageModule');
@@ -8981,7 +8981,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
 
             await saveConfigToServer('config');
             // 更新网页标题
-            document.title = `${currentConfig.优选订阅生成?.SUBNAME || 'edgetunnel'}设置页面 - 管理后台`;
+            document.title = `${currentConfig.优选订阅生成?.SUBNAME || 'ZQ-Edtu'}设置页面 - 管理后台`;
         }
 
         async function saveEch() {
@@ -9692,7 +9692,7 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
                     statusEl.style.background = 'linear-gradient(135deg, #ef4444 0, #dc2626 100%)';
                     statusEl.style.padding = '16px';
                     statusEl.style.borderRadius = '8px';
-                    statusEl.innerHTML = '❌ <strong>后端版本过旧</strong><br/><small style="opacity: 0.9;">请升级 edgetunnel 代码</small>';
+                    statusEl.innerHTML = '❌ <strong>后端版本过旧</strong><br/><small style="opacity: 0.9;">请升级 ZQ-Edtu 代码</small>';
                     document.getElementById('proxyConfirmBtn').disabled = true;
                     document.getElementById('proxyConfirmBtn').style.opacity = '0.5';
                 } else if (data.success === false) {
